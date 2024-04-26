@@ -1,0 +1,11 @@
+<!-- <h1>App componet is working</h1> -->
+<app-login-form
+  *ngIf="isLogin"
+  [parentMessage]="isLogin"
+  (childMessage)="componentCommunication($event)"
+></app-login-form>
+<app-register
+  *ngIf="!isLogin"
+  [parentMessage]="isLogin"
+  (childMessage)="componentCommunication($event)"
+></app-register>

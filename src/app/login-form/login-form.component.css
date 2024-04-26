@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  background-color: hwb(192 91% 7%);
+  width: 500px;
+  height: auto;
+  text-align: center;
+  padding: 10%;
+  margin: 10%;
+}
+h1 {
+  color: rgb(25, 186, 226);
+  margin-bottom: 17%;
+  font-size: 42px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  outline: none;
+  margin: 2%;
+  padding: 2%;
+  font-size: 23px;
+  /* border-color: white; */
+  border-radius: 9px;
+  border-style: solid;
+  width: 80%;
+}
+label {
+  margin-left: 9%;
+  /* font-size: 18px; */
+}
+span {
+  color: rgb(30, 215, 215);
+}
+input[type="checkbox"] {
+  accent-color: red;
+  transform: scale(1.5);
+}
+.checkbox-div {
+  margin: 7%;
+}
+#checkbox-label {
+  margin: 2%;
+}
+input[type="submit"] {
+  align-items: center;
+  padding: 2%;
+  border-radius: 4px;
+  background-color: hsl(214, 70%, 70%);
+  color: white;
+  margin-bottom: 4%;
+}
+
+input[type="submit"]:hover {
+  color: rgb(7, 204, 235);
+  background-color: white;
+  cursor: pointer;
+}
+.nameTag {
+  left: -29%;
+  color: red;
+  position: relative;
+}

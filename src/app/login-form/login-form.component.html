@@ -1,0 +1,102 @@
+<form (ngSubmit)="validateForm()" [formGroup]="userForm">
+  <div class="container">
+    <h1>Welcome to Academia</h1>
+
+    <input
+      type="text"
+      placeholder="Enter your name"
+      id="username"
+      formControlName="username"
+    />
+    <div *ngIf="userForm.controls['username'].touched">
+      <label
+        for="username"
+        name="username"
+        class="nameTag"
+        *ngIf=" userForm.controls['username'].errors?.['required']"
+        >This is a required field</label
+      >
+      <label
+        for="username"
+        name="username"
+        class="nameTag"
+        *ngIf="
+          userForm.controls['username'].errors?.['pattern']"
+        >This is not a valid name</label
+      >
+    </div>
+
+    <input
+      type="email"
+      name="Email"
+      id="email"
+      formControlName="email"
+      placeholder="Enter your Email"
+    />
+    <div *ngIf="userForm.controls['email'].touched">
+      <label
+        for="email"
+        name="email"
+        class="nameTag"
+        *ngIf=" userForm.controls['email'].errors?.['required']"
+        >This is a required field</label
+      >
+      <label
+        for="email"
+        name="email"
+        class="nameTag"
+        *ngIf="
+          userForm.controls['email'].errors?.['email']"
+        >Enter a valid email</label
+      >
+    </div>
+    <input
+      type="password"
+      placeholder="PassWord"
+      id="password"
+      formControlName="password"
+      name="password"
+    />
+    <div *ngIf="userForm.controls['password'].touched">
+      <label
+        for="password"
+        class="nameTag"
+        *ngIf="userForm.controls['password'].value === ''"
+      >
+        This is a required field</label
+      >
+      <label
+        for="password"
+        name="password"
+        *ngIf="
+          userForm.controls['password'].invalid &&
+          userForm.controls['password'].value !== ''
+        "
+        >Password must be 8 characters long,must have atleast 1 capital letter
+        and i special character</label
+      >
+    </div>
+    <br /><br />
+
+    <label for="isAccepted"></label><br />
+    <div class="checkbox-div">
+      <input
+        type="checkbox"
+        id="isAccepted"
+        name="isAccepted"
+        formControlName="isAccepted"
+      />
+      <label for="isAccepted" id="checkbox-label"
+        >I accept the <span>Terms and Condition</span> and
+        <span>Privacy Policy</span></label
+      >
+    </div>
+
+    <input type="submit" value="Create Account" [disabled]="userForm.invalid" />
+    <br />
+    <label for=""
+      >Already a User?
+      <a href="#" (click)="Login()">Log in</a>
+    </label>
+  </div>
+</form>

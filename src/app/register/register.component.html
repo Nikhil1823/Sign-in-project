@@ -1,0 +1,145 @@
+<form (ngSubmit)="formValidate()" [formGroup]="register_form">
+  <div class="container">
+    <h1>Register here....</h1>
+    <div class="name-field">
+      <!-- <label for="username">Name:</label> -->
+      <input
+        type="text"
+        id="username"
+        name="name"
+        placeholder="Name"
+        formControlName="userName"
+      />
+    </div>
+    <div class="danger-text">
+      <label
+        for="userName"
+        class="danger-text"
+        *ngIf="
+          register_form.controls['userName'].value === '' &&
+          register_form.controls['userName'].touched
+        "
+        >This is required field</label
+      >
+      <label
+        for="userName"
+        class="danger-text"
+        *ngIf="
+          register_form.controls['userName'].value !== '' &&
+          register_form.controls['userName'].invalid
+        "
+        >This is not a valid name</label
+      >
+    </div>
+
+    <div class="email-filed">
+      <!-- <label for="email">Email:</label> -->
+      <input
+        type="email"
+        id="email"
+        name="user-Email"
+        placeholder="Email"
+        formControlName="Email"
+      />
+      <div class="danger-text">
+        <label
+          for="user-Email"
+          class="danger-text"
+          *ngIf="
+            register_form.controls['Email'].value === '' &&
+            register_form.controls['Email'].touched
+          "
+          >This is required field</label
+        >
+
+        <label
+          for="user-Email"
+          class="danger-text"
+          *ngIf="
+            register_form.controls['Email'].value !== '' &&
+            register_form.controls['Email'].invalid
+          "
+          >This email is invalid</label
+        >
+      </div>
+    </div>
+    <div class="password-field">
+      <input
+        type="password"
+        id="password"
+        name="user-password"
+        placeholder="Password"
+        formControlName="Password"
+      />
+      <div class="danger-text">
+        <label
+          for="user-password"
+          class="danger-text"
+          *ngIf="
+            register_form.controls['Password'].value === '' &&
+            register_form.controls['Password'].touched
+          "
+          >This is required field</label
+        >
+        <label
+          for="user-password"
+          class="danger-text"
+          *ngIf="
+            register_form.controls['Password'].value !== '' &&
+            register_form.controls['Password'].invalid
+          "
+          >Password must be little more</label
+        >
+      </div>
+    </div>
+    <div class="confirm-password-field">
+      <input
+        type="password"
+        id="confirm-password"
+        name="user-password"
+        placeholder="Confirm-Password"
+        formControlName="ConfirmPassword"
+      />
+      <div class="danger-text">
+        <label
+          for="user-password"
+          class="danger-text"
+          *ngIf="
+            register_form.controls['ConfirmPassword'].value === '' &&
+            register_form.controls['ConfirmPassword'].touched
+          "
+          >This is required field</label
+        >
+        <label
+          for="user-password"
+          class="danger-text"
+          *ngIf="
+            register_form.controls['ConfirmPassword'].value !== '' &&
+            register_form.controls['Password'].invalid
+          "
+          >Password must be little more</label
+        >
+        <label
+          for="user-password"
+          class="danger-text"
+          *ngIf="
+            register_form.controls['ConfirmPassword'].value !==
+            register_form.controls['Password'].value
+          "
+          >Password mismatches</label
+        >
+      </div>
+    </div>
+    <div class="submit-btn">
+      <input
+        type="submit"
+        value="Register"
+        [disabled]="register_form.invalid"
+      />
+    </div>
+    <label for=""
+      >Already a user?
+      <a href="#" (click)="Register()">Login-in</a>
+    </label>
+  </div>
+</form>
