@@ -23,14 +23,8 @@ input[type="email"] {
   margin: 2%;
   padding: 2%;
   font-size: 23px;
-  /* border-color: white; */
-  border-radius: 9px;
-  border-style: solid;
+
   width: 80%;
-}
-label {
-  margin-left: 9%;
-  /* font-size: 18px; */
 }
 span {
   color: rgb(30, 215, 215);
@@ -38,12 +32,6 @@ span {
 input[type="checkbox"] {
   accent-color: red;
   transform: scale(1.5);
-}
-.checkbox-div {
-  margin: 7%;
-}
-#checkbox-label {
-  margin: 2%;
 }
 input[type="submit"] {
   align-items: center;
@@ -64,3 +52,4 @@ input[type="submit"]:hover {
   color: red;
   position: relative;
 }
+
