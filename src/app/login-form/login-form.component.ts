@@ -6,7 +6,6 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-
 @Component({
   selector: 'app-login-form',
   standalone: true,
@@ -16,7 +15,6 @@ import {
 })
 export class LoginFormComponent {
   userForm: FormGroup;
-
   constructor() {
     this.userForm = new FormGroup({
       username: new FormControl('', [
@@ -33,15 +31,13 @@ export class LoginFormComponent {
     });
   }
   validateForm() {
-    if (this.userForm.valid) {
-      console.log(this.userForm.value);
-    }
   }
+  
   @Input() parentMessage?: boolean;
   @Output() childMessage = new EventEmitter<boolean>();
   Login() {
-    console.log(this.parentMessage);
     this.parentMessage = !this.parentMessage;
     this.childMessage.emit(this.parentMessage);
   }
 }
+
