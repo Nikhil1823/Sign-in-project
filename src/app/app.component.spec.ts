@@ -1,11 +1,6 @@
 
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [AppComponent],
-    }).compileComponents();
-  });
+
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
@@ -26,4 +21,5 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Forms-project');
   });
 });
+
 
