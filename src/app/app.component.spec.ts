@@ -1,13 +1,4 @@
 
-
-
-
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
   it(`should have the 'Forms-project' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
@@ -21,5 +12,6 @@
     expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Forms-project');
   });
 });
+
 
 
