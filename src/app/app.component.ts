@@ -21,10 +21,6 @@ export class AppComponent {
   }
 }
 
-//added 5th comment
-
-
-
 
 
 
