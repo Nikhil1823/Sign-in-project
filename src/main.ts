@@ -7,7 +7,3 @@ bootstrapApplication(AppComponent, appConfig)
 
 
 //add one more comment
-//add one more also
-
-
-
